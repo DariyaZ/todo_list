@@ -1,2 +1,0 @@
-(window["webpackJsonptodo-list"]=window["webpackJsonptodo-list"]||[]).push([[0],{3:function(n,e,t){n.exports=t(9)},8:function(n,e,t){},9:function(n,e,t){"use strict";t.r(e);var o=t(0),r=t.n(o),a=t(2),c=t.n(a);t(8);var i=function(){return r.a.createElement("div",{className:"App"})};c.a.render(r.a.createElement(i,null),document.getElementById("root"))}},[[3,1,2]]]);
-//# sourceMappingURL=main.2c9a1d97.chunk.js.map
