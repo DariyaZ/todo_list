@@ -36,16 +36,15 @@ export default function ToDoContainer() {
 
     return (
         <div className='container'>
-            {/* <header className='header'>
-                <h1 className='heading'>TO DO LIST</h1>
-            </header> */}
             <div className='toDoInput'>
                 <form>
                     <input type='text'
-                        value={value}
-                        onChange={(e) => handleChange(e.target.value)}
-                        onKeyPress={keyPressed}/>
-                    <button type='button' onClick={handleAdd}>+</button>
+                           className='taskInput'
+                           value={value}
+                           placeholder={'Type todo here'}
+                           onChange={(e) => handleChange(e.target.value)}
+                           onKeyPress={keyPressed}/>
+                    <button className='addButton' type='button' onClick={handleAdd}></button>
                 </form>
             </div>
             <div className='listItems'>{list}</div>

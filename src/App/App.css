@@ -1,7 +1,10 @@
-.body {
-  margin: 0;
-}
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
 
+body {
+  margin: 0;
+  font-family: 'Noto Serif', serif;
+  background-color: rgb(238, 226, 226);
+}
 
 .container {
   display: flex;
@@ -9,22 +12,51 @@
   align-items: center;
 }
 
-/* .header {
-  width: 100%;
-  text-align: center;
-  background-color: red;
-} */
-
 .toDoInput {
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
+  width: 800px;
   padding: 30px; 
-  /* background-color: #333; */
+}
+
+.toDoInput form {
+  display: flex;
+  align-items: center;
+}
+
+.taskInput {
+  padding: 10px;
+  margin: 11px 10px 0 0;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  width: 70%;
+  outline: none;
+}
+
+.taskInput:focus {
+  border-color: #d1a52d;
+}
+
+.addButton {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  background-image: url(../icons/add.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: -10px;
+  transition: .5s;
+}
+
+.addButton:hover {
+  transform: scale(1.05);
+  border: 1px solid rgb(209, 152, 152);;
 }
 
 .item {
-  width: 600px;
+  width: 800px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,6 +98,10 @@
   background-size: 50%;
   outline: none;
   cursor: pointer;
+}
+
+.removeButton:hover {
+  transform: scale(1.05);
 }
 
 #status {
