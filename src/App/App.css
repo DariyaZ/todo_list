@@ -1,3 +1,99 @@
-.App {
+.body {
+  margin: 0;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .header {
+  width: 100%;
   text-align: center;
+  background-color: red;
+} */
+
+.toDoInput {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  padding: 30px; 
+  /* background-color: #333; */
+}
+
+.item {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.item:hover {
+  background-color: rgb(99, 182, 99);
+  border-radius: 3px;
+}
+
+.task {
+  flex: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  display: none;
+}
+
+.doneTask {
+  opacity: 0.4;
+}
+
+.doneTask p {
+  text-decoration: line-through;
+}
+
+.removeButton {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  background-image: url(../icons/garbage.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+#status {
+  font-size: 1.2rem;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 50%;
+  transition: .1s all;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#status:hover {
+  transform: scale(.95);
+}
+
+#status:after {
+  content: "🤜";
+}
+
+.checkbox:checked + #status {
+  transform: scale(1.1);
+}
+
+.checkbox:checked + #status:hover {
+  transform: scale(1.05);
+}
+
+.checkbox:checked + #status:after {
+  content: "👍";
 }
