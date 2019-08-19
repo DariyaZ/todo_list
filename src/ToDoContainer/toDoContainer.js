@@ -18,7 +18,7 @@ export default function ToDoContainer() {
 
     const removeItem = (index) => {
         const refreashedList = [...toDoList];
-        refreashedList.splice(index, 1);
+        refreashedList.splice(index, 1, '');
         hamdleItemChange(refreashedList);
     };
 
@@ -29,10 +29,15 @@ export default function ToDoContainer() {
         }
     }
 
-    const list = toDoList.map((item, index) => <ToDoItem key={index}
-                                                         content={item}
-                                                         index={index}
-                                                         removeItem={removeItem}/>);
+    
+    const list = toDoList.map((item, index) => {
+        if (item === '') return;
+
+        return <ToDoItem key={index}
+                         content={item}
+                         index={index}
+                         removeItem={removeItem}/>
+    });
 
     return (
         <div className='container'>
